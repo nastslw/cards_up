@@ -4,7 +4,7 @@ from aiogram.types import FSInputFile
 from aiogram import F, Router
 from aiogram.filters import CommandStart, Command, Filter
 from aiogram.types import Message
-import app.keyboards as kb
+import keyboards as kb
 import random
 from aiogram.enums import ParseMode
 
