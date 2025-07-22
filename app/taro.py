@@ -1,11 +1,18 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from app.config import API_TOKEN
+
 from app.handlers import router
 import json
 
-pip freeze > requirements.txt
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # загрузить все переменные из .env файла в окружение
+
+API_TOKEN = os.getenv("API_TOKEN")  # забираем токен из переменных окружения
+
 bot = Bot(token=API_TOKEN)
+
 dp = Dispatcher()
 
 
